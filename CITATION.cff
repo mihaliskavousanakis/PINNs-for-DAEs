@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+title: "PINNs for DAEs — Symmetry-Driven PDE Dynamics"
+authors:
+  - family-names: Kavousanakis
+    given-names: Michail E.
+    affiliation: "National Technical University of Athens"
+  - family-names: Fabiani
+    given-names: Gianluca
+    affiliation: "Johns Hopkins University"
+  - family-names: Georgiou
+    given-names: Anastasia
+    affiliation: "Johns Hopkins University"
+  - family-names: Siettos
+    given-names: Constantinos
+    affiliation: "Università degli Studi di Napoli Federico II"
+  - family-names: Kevrekidis
+    given-names: Panayotis G.
+    affiliation: "University of Massachusetts Amherst"
+  - family-names: Kevrekidis
+    given-names: Ioannis G.
+    affiliation: "Johns Hopkins University"
+    email: yannisk@jhu.edu
+preferred-citation:
+  type: article
+  title: "Going with the Flow to Solve for Symmetry-Driven PDE Dynamics with Physics-Informed Neural Networks"
+  authors:
+    - family-names: Kavousanakis
+      given-names: Michail E.
+    - family-names: Fabiani
+      given-names: Gianluca
+    - family-names: Georgiou
+      given-names: Anastasia
+    - family-names: Siettos
+      given-names: Constantinos
+    - family-names: Kevrekidis
+      given-names: Panayotis G.
+    - family-names: Kevrekidis
+      given-names: Ioannis G.
+  year: 2026
