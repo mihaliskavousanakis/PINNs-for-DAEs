@@ -74,20 +74,20 @@ Some scripts contain a `return` statement immediately before the training loop. 
 
 | Section / Figure                                         | Case-study folder                                            | Notes |
 |----------------------------------------------------------|--------------------------------------------------------------|-------|
-| §"Case study 1" — Nagumo, Fig. 1                         | `case_studies/01_nagumo_forward/`                            | Forward problem; trains for 10,000 L-BFGS epochs over `y ∈ [-30, 30]`, `t ∈ [0, 20]`. |
+| _"Case study 1"_ — **Nagumo**, Fig. 1                         | `case_studies/01_nagumo_forward/`                            | Forward problem; trains for 10,000 L-BFGS epochs over `y ∈ [-30, 30]`, `t ∈ [0, 20]`. |
 | §"Parameter inference in the co-moving frame", Fig. 2    | `case_studies/01_nagumo_inverse/`                            | Inverse problem (infer `D`); sparse synthetic data are in `data_for_Nagumo_fifth.mat` (loaded automatically). The `vanilla_PINN_baseline/` subfolder reproduces the vanilla PINN comparison. |
-| §"Case study 2" — 2D Diffusion, Fig. 3                   | `case_studies/02_diffusion_2D/`                              | Trains a `N_w(xi, eta, tau)` with 3 hidden layers × 40 neurons. Comment out the `return` statement to start training. Loads `result_ti5.mat` as a warm start. |
-| §"Case study 3" — 2D Porous Medium, Fig. 4               | `case_studies/03_porous_medium_2D/`                          | Polar-coordinate PME with orthogonality template; loads `result_test.mat`. |
-| §"Case study 4" — Burgers, Fig. 5                        | `case_studies/04_burgers/`                                   | 5,000 L-BFGS epochs; no warm start required. `result_10000_for_paper.mat` is provided for direct post-processing. |
-| §"Case study 5" — gKdV steady-state, Fig. 6              | `case_studies/05_gKdV_steady_blowup/`                        | Steady-state PINN that treats the blow-up rate `G` as a trainable parameter. Several warm-start weight files (`init_weights_*.mat`) are provided, matching the four pretraining strategies in SI §4.2. |
-| SI §1 — 1D Diffusion (self-similar), Fig. SI-1           | `supplementary/SI1_diffusion_1D/`                            | 15,000 L-BFGS epochs; `result_15000_for_paper.mat` provided. |
-| SI §2 — Axisymmetric 2D Porous Medium, Fig. SI-2         | `supplementary/SI2_porous_medium_axisymmetric/`              | 15,000 L-BFGS epochs; loads `result_7_new.mat` as warm start; `result_15000_for_paper.mat` provided. |
-| SI §3.1 — Nagumo FD baseline, Fig. SI-3                  | `baselines/nagumo_FD/`                                        | Implicit backward-Euler / central-FD reference. Run `main_nagumo.m`. |
-| SI §3.2 — Axisymmetric PME ("Graveleau") FD, Fig. SI-4   | `baselines/porous_medium_axisymmetric_FD/`                    | FD-MN reference for the rescaled axisymmetric PME. Run `main.m`. |
-| SI §3.3 — 2D PME polar FE baseline, Fig. SI-5            | `baselines/porous_medium_2D_polar_FE/`                        | COMSOL Multiphysics `.mph` files (open in COMSOL ≥ 6.0). |
-| SI §3.4 — Burgers FD baseline, Fig. SI-6                 | `baselines/burgers_FD/`                                       | Run `main.m`. |
-| SI §4.1 — Robustness to random initialization (Burgers)  | `case_studies/04_burgers/`                                   | Repeat `main.m` with different random seeds (`rng(seed); ...`). |
-| SI §4.2 — KdV warm-up sensitivity, Fig. SI-7             | `case_studies/05_gKdV_steady_blowup/`                        | Switch the `load init_weights_*` line in `main.m` between `init_weights_TW.mat`, `init_weights_gaussian_dev_05.mat`, `init_weights_gaussian_dev_2.mat`, and `initial_weights_gaussian.mat`. |
+| _"Case study 2"_ — **2D Diffusion**, Fig. 3                   | `case_studies/02_diffusion_2D/`                              | Trains a `N_w(xi, eta, tau)` with 3 hidden layers × 40 neurons. Comment out the `return` statement to start training. Loads `result_ti5.mat` as a warm start. |
+| _"Case study 3"_ — **2D Porous Medium**, Fig. 4               | `case_studies/03_porous_medium_2D/`                          | Polar-coordinate PME with orthogonality template; loads `result_test.mat`. |
+| _"Case study 4"_ — **Burgers**, Fig. 5                        | `case_studies/04_burgers/`                                   | 5,000 L-BFGS epochs; no warm start required. `result_10000_for_paper.mat` is provided for direct post-processing. |
+| _"Case study 5"_ — **gKdV steady-state**, Fig. 6              | `case_studies/05_gKdV_steady_blowup/`                        | Steady-state PINN that treats the blow-up rate `G` as a trainable parameter. Several warm-start weight files (`init_weights_*.mat`) are provided, matching the four pretraining strategies in SI §4.2. |
+| SI §1 — **1D Diffusion (self-similar)**, Fig. SI-1           | `supplementary/SI1_diffusion_1D/`                            | 15,000 L-BFGS epochs; `result_15000_for_paper.mat` provided. |
+| SI §2 — **Axisymmetric 2D Porous Medium**, Fig. SI-2         | `supplementary/SI2_porous_medium_axisymmetric/`              | 15,000 L-BFGS epochs; loads `result_7_new.mat` as warm start; `result_15000_for_paper.mat` provided. |
+| SI §3.1 — **Nagumo FD baseline**, Fig. SI-3                  | `baselines/nagumo_FD/`                                        | Implicit backward-Euler / central-FD reference. Run `main_nagumo.m`. |
+| SI §3.2 — **Axisymmetric PME ("Graveleau") FD**, Fig. SI-4   | `baselines/porous_medium_axisymmetric_FD/`                    | FD-MN reference for the rescaled axisymmetric PME. Run `main.m`. |
+| SI §3.3 — **2D PME polar FE baseline**, Fig. SI-5            | `baselines/porous_medium_2D_polar_FE/`                        | COMSOL Multiphysics `.mph` files (open in COMSOL ≥ 6.0). |
+| SI §3.4 — **Burgers FD baseline**, Fig. SI-6                 | `baselines/burgers_FD/`                                       | Run `main.m`. |
+| SI §4.1 — **Robustness to random initialization (Burgers)**  | `case_studies/04_burgers/`                                   | Repeat `main.m` with different random seeds (`rng(seed); ...`). |
+| SI §4.2 — **KdV warm-up sensitivity**, Fig. SI-7             | `case_studies/05_gKdV_steady_blowup/`                        | Switch the `load init_weights_*` line in `main.m` between `init_weights_TW.mat`, `init_weights_gaussian_dev_05.mat`, `init_weights_gaussian_dev_2.mat`, and `initial_weights_gaussian.mat`. |
 
 ### Plotting the figures
 
