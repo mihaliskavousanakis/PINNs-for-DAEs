@@ -4,6 +4,7 @@ Reproducibility repository for the paper:
 
 > Kavousanakis, M. E., Fabiani, G., Georgiou, A., Siettos, C., Kevrekidis, P. G., and Kevrekidis, I. G.
 > *"Going with the Flow to Solve for Symmetry-Driven PDE Dynamics with Physics-Informed Neural Networks."*
+> Nature Communications 2026
 
 This repository contains the MATLAB code and warm-start data required to reproduce every case study reported in the manuscript (`pinns_for_DAEs_manuscript.pdf`) and Supplementary Information (`PINNs_for_DAEs_SI.pdf`).
 
