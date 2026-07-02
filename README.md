@@ -1,4 +1,5 @@
-# PINNs for DAEs — Symmetry-Driven PDE Dynamics
+MN-PINNs for DAEs and Symmetry-Driven PDE Dynamics
+=====
 
 Reproducibility repository for the paper:
 
