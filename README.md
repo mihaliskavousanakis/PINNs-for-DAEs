@@ -6,7 +6,7 @@ Reproducibility repository for the paper:
 > *"Going with the Flow to Solve for Symmetry-Driven PDE Dynamics with Physics-Informed Neural Networks."*
 > Nature Communications 2026
 
-This repository contains the MATLAB code and warm-start data required to reproduce every case study reported in the manuscript (`pinns_for_DAEs_manuscript.pdf`) and Supplementary Information (`PINNs_for_DAEs_SI.pdf`).
+This repository contains the MATLAB code and warm-start data required to reproduce every case study reported in the manuscript and Supplementary Information.
 
 ## Overview
 
@@ -16,6 +16,33 @@ The code implements a Physics-Informed Neural Network (PINN) framework that comb
 * `N_p(tau)`   — approximates the time-dependent symmetry parameters (wave speed and/or scaling rates).
 
 Training uses MATLAB's `dlnetwork` / `dlarray` automatic-differentiation framework with the L-BFGS optimizer (`lbfgsupdate`).
+
+## Highlights
+
+⚡ Physics-Informed Neural Networks in dynamically rescaled coordinates for solving symmetry-driven PDE dynamics
+
+🧠 Reformulation of PDEs into index-2 differential-algebraic equations (DAEs) through moving-frame and dynamic renormalization techniques
+
+🌊 Simultaneous learning of the solution profile and the symmetry evolution (translations, scalings, and blow-up rates) using two coupled neural networks
+
+🎯 Accurate treatment of traveling waves, self-similar solutions, and steady-state blow-up dynamics within a unified PINN framework
+
+📈 Demonstrated across challenging nonlinear PDEs, including Nagumo, Burgers, porous-medium, diffusion, and generalized KdV equations
+
+🔍 Enables both forward simulations and inverse parameter inference directly in symmetry-adapted coordinates
+
+🔬 Includes comparisons with vanilla PINNs and classical finite-difference / finite-element baselines
+
+💻 Fully reproducible MATLAB implementation with all case studies, pretrained models, and scripts used to generate the figures from the paper
+
+## Abstract of the paper
+We address a computational framework that integrates symmetry reduction into Physics-Informed Neural Networks (PINNs) for analyzing symmetry-driven dynamics in nonlinear partial differential equations (PDEs).
+Using an auxiliary network to learn time-dependent transformations, we render the symmetry-invariant solutions stationary or slowly varying in rescaled coordinates while simultaneously inferring the symmetry parameters (e.g., wave speed, scaling rates).
+This yields a modified evolution equation coupled with algebraic constraints on symmetry parameters, producing index-2 differential-algebraic equation (DAE) systems.
+While conventional standard PDE/ODE solvers struggle or even fail with such high-index DAEs, we employ PINNs as an alternative approach that naturally unifies PDE residuals and algebraic constraints in a single loss function.
+This allows simultaneous inference of the invariant solutions and the transformation properties without large domains, mesh adaptivity, or front tracking.
+Beyond forward simulation, our framework also enables robust parameter inference from sparse, spatially offset data where vanilla PINNs fail.
+Our numerical demonstrations include, among others, the {2D} porous medium, {the generalized Korteweg-de Vries} and Burgers PDE, showcasing our proposed approach as a powerful tool {for the solution of both the forward and inverse problems} for index-2 DAEs arising in nonlinear wave and scaling dynamics.
 
 ## Computational Environment
 
@@ -117,6 +144,32 @@ Each case-study folder also contains the `.mat` files needed to re-load the trai
 ## Citation
 
 If you use this code, please cite the manuscript above (citation details to be updated upon publication).
+
+---
+
+## MIT License
+
+Copyright (c) 2026 The authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+---
+
+## Disclaimer
+
+This software is provided "as is" without any express or implied warranties.
+This includes, but is not limited to, warranties of merchantability, fitness for a particular purpose, and non-infringement.
+The authors and copyright holders are not liable for any claims, damages, or other liabilities arising from the use of this software
+
+Last revised by M. Kavousanakis, July 2, 2026
 
 ## Contact
 
